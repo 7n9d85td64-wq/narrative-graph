@@ -1,0 +1,55 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Narrative Graph Node",
+  "description": "叙事知识图谱中一个节点的通用结构",
+  "type": "object",
+  "required": ["node_id", "type", "name"],
+  "properties": {
+    "node_id": {
+      "type": "string",
+      "description": "唯一标识符，Dify 代码节点用它定位节点"
+    },
+    "type": {
+      "type": "string",
+      "enum": ["plot_pattern", "character_arc", "archetype", "rhythm", "rule", "pacing"],
+      "description": "节点类型"
+    },
+    "name": {
+      "type": "string",
+      "description": "人类可读的名称"
+    },
+    "description": {
+      "type": "string"
+    },
+    "source_works": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "发现此规律的作品 ID 列表"
+    },
+    "version": {
+      "type": "string",
+      "pattern": "^\\d+\\.\\d+\\.\\d+$"
+    },
+    "properties": {
+      "type": "object",
+      "description": "节点特有的属性数据（约束参数等）"
+    },
+    "edges": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["relation", "target"],
+        "properties": {
+          "relation": {
+            "type": "string",
+            "description": "关系类型 eg. requires, conflicts_with, paired_with"
+          },
+          "target": {
+            "type": "string",
+            "description": "目标节点的 node_id"
+          }
+        }
+      }
+    }
+  }
+}

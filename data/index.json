@@ -1,0 +1,16 @@
+{
+  "version": "0.1.0",
+  "name": "叙事科学知识图谱",
+  "description": "L2 结构化叙事理论数据 — Dify 工作流代码节点直接读取",
+  "last_updated": "2026-06-05",
+  "nodes": {
+    "patterns": ["pattern_crisis_reveal"],
+    "archetypes": ["arc_hero_confrontation"],
+    "rhythms": [],
+    "rules": []
+  },
+  "stats": {
+    "total_nodes": 2,
+    "total_edges": 7
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "node_id": "pattern_crisis_reveal",
+  "type": "plot_pattern",
+  "name": "危机揭示型",
+  "description": "通过逐步揭示隐藏危机的存在和规模来推动叙事，信息不对称是核心驱动力",
+  "source_works": ["example_work_01", "example_work_02"],
+  "version": "0.1.0",
+  "properties": {
+    "rhythm_curve": [0.2, 0.3, 0.5, 0.8, 0.95],
+    "emotion_anchor": ["fear", "curiosity", "urgency"],
+    "chapter_distribution": {
+      "setup": 0.15,
+      "build": 0.30,
+      "crisis": 0.40,
+      "aftermath": 0.15
+    },
+    "pacing_template": {
+      "unit": "chapter",
+      "ramp_up_point": 0.35,
+      "peak_point": 0.85
+    }
+  },
+  "edges": [
+    { "relation": "requires", "target": "arc_hero_confrontation" },
+    { "relation": "often_follows", "target": "pattern_foreshadowing" },
+    { "relation": "conflicts_with", "target": "pattern_slice_of_life" },
+    { "relation": "best_pacing", "target": "tempo_fast_rising" }
+  ]
+}

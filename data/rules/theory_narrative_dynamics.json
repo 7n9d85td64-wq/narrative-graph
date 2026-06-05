@@ -1,0 +1,37 @@
+{
+  "node_id": "theory_narrative_dynamics",
+  "type": "rule",
+  "name": "叙事动力学完整体系",
+  "version": "3.1.0",
+  "description": "叙事动力学是用于分析、生成和进化叙事文本的工程化理论体系。核心理念：故事是在规则边界内实现个人欲望最大化的策略游戏。",
+  "source_works": [],
+  "properties": {
+    "core_premise": "欲望的狩猎 + 双标的胜利",
+    "protagonist_mode": "表面顺从、内里收割",
+    "default_quadrant": "规则玩家",
+    "default_strategies": ["离卦契约", "巽包兑"],
+    "derivation_chain": "核心前提 → 象限(X,Y) → (F,Dir,Pen,B,T区间) → (DS,RS) → 主导卦象 → 策略库 → 固定阈值 → 可变区间 → InfoGap → EXP",
+    "subsystems": [
+      "8维概念空间",
+      "八卦向量组",
+      "五行流转引擎",
+      "欲望矩阵",
+      "规则引擎",
+      "七层精度框架",
+      "信息差叙事矩阵",
+      "精算策略库",
+      "欲望解码器"
+    ]
+  },
+  "edges": [
+    {"relation": "contains", "target": "space_8d"},
+    {"relation": "contains", "target": "trigrams"},
+    {"relation": "contains", "target": "wuxing_flow"},
+    {"relation": "contains", "target": "desire_matrix"},
+    {"relation": "contains", "target": "rule_engine"},
+    {"relation": "contains", "target": "precision_framework"},
+    {"relation": "contains", "target": "infogap_matrix"},
+    {"relation": "contains", "target": "strategy_library"},
+    {"relation": "contains", "target": "desire_decoder"}
+  ]
+}

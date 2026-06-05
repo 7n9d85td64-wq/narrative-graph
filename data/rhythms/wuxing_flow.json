@@ -1,0 +1,47 @@
+{
+  "node_id": "wuxing_flow",
+  "type": "rhythm",
+  "name": "五行流转引擎",
+  "version": "3.1.0",
+  "description": "基于五行生克关系的叙事能量流转模型。Y(Dir×A')判定阴阳→五行强度→概念交互函数Φ→相生/相克判定→流转路径得分FC。",
+  "properties": {
+    "yin_yang_formula": "Y = Dir × A'，Y≥0.5阳(生)，Y<0.5阴(克)",
+    "intensity_formula": "I_phase = 卦象匹配度 × (F+Pen+B+A'+T)/5",
+    "interaction_function": "Φ(E_t, E_{t+1}) = 0.5×Dynamic + 0.3×Overlap + 0.2×Logic",
+    "interaction_thresholds": {
+      "sheng": "Φ > 0.3",
+      "ke": "Φ < -0.3",
+      "neutral": "-0.3 ≤ Φ ≤ 0.3"
+    },
+    "sheng_coefficients": {
+      "木生火": {"formula":"I_wood×A'_wood×1.0","condition":"A'_wood>0.5"},
+      "火生土": {"formula":"I_fire×T_fire×0.7","note":"70%沉淀30%散失"},
+      "土生金": {"formula":"I_earth×P_earth×0.5","note":"外力打破稳定才收敛"},
+      "金生水": {"formula":"I_metal×(1-P_metal)×0.8"},
+      "水生木": {"formula":"I_water×Pen_water×1.2"}
+    },
+    "ke_coefficients": {
+      "木克土": {"formula":"I_wood×F_wood×1.0","condition":"F_wood>D_earth","meaning":"爆发打破沉默=焊死节点"},
+      "土克水": {"formula":"I_earth×B_earth×0.8","condition":"B_earth>Pen_water","meaning":"高压阻止情绪积累"},
+      "水克火": {"formula":"I_water×D_water×1.0","condition":"D_water>A_fire","meaning":"憋屈让释放不彻底=虐"},
+      "火克金": {"formula":"I_fire×T_fire×0.9","condition":"T_fire>P_metal","meaning":"爆发压制收敛=连环反转"},
+      "金克木": {"formula":"I_metal×P_metal×0.7","condition":"P_metal>A_wood","meaning":"平静抑制萌动=策略等待"}
+    },
+    "flow_score": {
+      "formula": "FC = 实际得分/5.0",
+      "sheng": "+1","ke": "-0.5","cheng_wu": "-1","neutral": "0",
+      "thresholds": {"完整流转":"≥0.8","部分流转":"0.5-0.8","断裂流转":"<0.5"}
+    },
+    "energy_templates": {
+      "水生木": "水被压到极限后的必然爆发",
+      "木生火": "之前被压着的东西同时点燃,宣告之后没有退路",
+      "火克金": "能烧的都烧完了,剩下灰烬和安静,有余温有余震"
+    }
+  },
+  "edges": [
+    {"relation": "basis_for", "target": "trigrams"},
+    {"relation": "coordinates", "target": "space_8d"},
+    {"relation": "constrained_by", "target": "rule_engine"},
+    {"relation": "part_of", "target": "theory_narrative_dynamics"}
+  ]
+}

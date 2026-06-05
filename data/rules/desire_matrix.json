@@ -1,0 +1,52 @@
+{
+  "node_id": "desire_matrix",
+  "type": "rule",
+  "name": "欲望矩阵与自动推导",
+  "version": "3.1.0",
+  "description": "通过X(Dir均值)和Y(RS规则颠覆性)两轴划分四个创作象限，锁定后自动推导F/Dir嵌套区间→DS/RS基线→主导卦象→核心策略。",
+  "properties": {
+    "axes": {
+      "X": {"name": "方向性均值", "formula": "Dir_avg", "positive": "向外", "negative": "向内"},
+      "Y": {"name": "规则颠覆性", "formula": "RS", "above_0.5": "打破规则", "below_0.5": "遵循规则"}
+    },
+    "quadrants": {
+      "规则玩家": {
+        "condition": "X>0 且 Y>0.5",
+        "ds_baseline_range": [0.75, 0.95],
+        "rs_baseline_range": [0.60, 0.85],
+        "f_inner_range": [0.75, 0.95],
+        "f_surface_range": [0.10, 0.25],
+        "dominant_trigrams": ["离","巽"],
+        "core_strategies": ["离卦契约","巽包兑"],
+        "funnel_rules": ["欲望最大化","反差最大化","速度最大化"]
+      },
+      "规则改造者": {
+        "condition": "X>0 且 Y>0.9",
+        "note": "欲望向外+彻底颠覆。推翻旧秩序，建立新规则。"
+      },
+      "内心探索者": {
+        "condition": "X<0 且 Y<0.5 且主导卦象兑/坎",
+        "note": "欲望向内+遵循规则+收束/积累"
+      },
+      "规则建筑师": {
+        "condition": "X<0 且 Y<0.5 且主导卦象震/巽",
+        "note": "欲望向内+遵循规则+萌动/渗透"
+      }
+    },
+    "weld_node_mechanism": {
+      "before": "暗爽期：F_surface[0.10,0.25] F_inner[0.75,0.95]，差值大→DS高",
+      "after": "明爽期：F跃升到[0.70,0.95]，DS降低→暗爽切换为明爽",
+      "bright_params": "F[0.85,0.99] Dir[+0.75,+0.95] T[0.75,0.95] B>0.70(主角侧)"
+    },
+    "platform_ds_baselines": {
+      "番茄短篇": [0.85, 0.95],
+      "晋江长篇": [0.70, 0.85]
+    }
+  },
+  "edges": [
+    {"relation": "uses", "target": "space_8d"},
+    {"relation": "uses", "target": "trigrams"},
+    {"relation": "constrained_by", "target": "rule_engine"},
+    {"relation": "part_of", "target": "theory_narrative_dynamics"}
+  ]
+}

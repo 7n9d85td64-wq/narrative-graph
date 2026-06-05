@@ -1,0 +1,1 @@
+{"node_id":"param_tomato_short","type":"parameter","name":"番茄短篇参数","version":"1.0.0","category":"参数库·分平台","confidence":"专家经验(Low)","properties":{"DS_range":[0.85,0.95],"precision":"六层(无卷层,块代章)","word_count":"8000-30000字","weld_node":"≤前30%块","golden_finger":"第1块前300字","style_default":"简洁直白型/短篇冲击型","憋屈上限":"连续≤2块","金手指信号":"前500字内InfoGap峰值>0.7"}}

@@ -1,16 +1,23 @@
 {
   "name": "叙事动力学 L2 知识图谱索引",
-  "version": "3.1.0",
+  "version": "3.1.1",
   "last_updated": "2026-06-06",
+  "total_registered_nodes": 30,
   "structure": {
-    "theory": {"desc":"理论库·不可变","count":9,"files":["space_8d","trigrams","six_pool_tags","wuxing_flow","desire_matrix","rule_engine","precision_framework","infogap_matrix","narrative_action","style_engine"]},
-    "parameters/common": {"desc":"参数库·通用基线(可进化)","count":1,"files":["baseline"]},
-    "interaction": {"desc":"交互库·静态素材(可追加)","count":5,"files":["professions(10职业)","regions(13地域)","personalities(8性格)","character_functions(7角色)","styles(3风格)"]},
-    "strategies": {"desc":"策略库·6大核心策略","count":6,"files":["li_gua","xun_bao_dui","dui_gua","emotion_capital","weak_dominator","alliance"]},
+    "theory": {"desc":"理论库·不可变","count":15,"files":["core_premise(女频心理模型)","space_8d(极端化设计意图)","trigrams(认知翻转+并置预处理)","six_pool_tags(A+C+E同类规则+F池)","wuxing_flow(Φ分维度计算+FC分路径)","desire_matrix(三条件焊死+SNC+四象限独立)","rule_engine(可变区间动态+铁律优先级)","precision_framework(分层聚合+离群点权重)","infogap_matrix(认知差+期待确定性+悬疑路径)","narrative_action(S离散化+S曲线校准)","style_engine(分象限偏移+硬约束钳制)","profession_vectorization(职业化系数+边界度)","desire_decoder_engine(三引擎共享插件+动态权重)","long_form_rules(跨卷伏笔+道德账簿)","theory_outlook(知识蒸馏闭环+时空涌现)","vocabulary_system(新词半自动入库)","system_governance(6项战略治理规则)"]},
+    "parameters": {"desc":"参数库·可进化","count":3,"files":["common/baseline(八卦向量+生克系数+CV阈值)","platform/tomato_short","platform/jinjiang_long"]},
+    "interaction": {"desc":"交互库·静态素材","count":7,"files":["professions(10职业)","regions(13地域)","personalities(8性格)","character_functions(7角色)","styles(3风格)","f_pool(8社会形态+SNC)","word_fingerprints(7词级标签)"]},
+    "strategies": {"desc":"策略库","count":6,"files":["li_gua(离卦契约·3变体)","xun_bao_dui(巽包兑)","dui_gua(兑卦承诺)","emotion_capital(情绪资本)","weak_dominator(示弱支配者)","alliance(联盟精算师)"]},
     "templates": {"desc":"黄金模板库","count":0},
     "cases": {"desc":"案例库","count":0}
   },
-  "total_registered_nodes": 21,
-  "pending": [],
-  "note": "理论库+参数库+交互库+策略库=21节点全部注册完毕。模板库和案例库随分析报告积累自动增长。"
+  "governance": {
+    "cold_start": "专家经验基线+可信度字段",
+    "target_drift": "反共识·创意保护区",
+    "creator_cockpit": "创作者驾驶舱·为什么+挑战我",
+    "moral_ledger": "道德账簿·人设崩塌预警",
+    "validation_gap": "双轨参数池·validated/speculative",
+    "source_auth": "源认证·human/system/unknown"
+  },
+  "pending_calibration": "所有数值标注待爆款数据校准。素材库16标签组合文件夹有预处理文本,尚未跑欲望解码器"
 }

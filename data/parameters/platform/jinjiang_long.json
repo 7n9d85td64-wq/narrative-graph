@@ -1,0 +1,1 @@
+{"node_id":"param_jinjiang_long","type":"parameter","name":"晋江长篇参数","version":"1.0.0","category":"参数库·分平台","confidence":"专家经验(Low)","properties":{"DS_range":[0.70,0.85],"precision":"七层(词→句→段→章→单元→卷→全篇)","word_count":">30万字","weld_node":"≤前30%单元,每卷≥1次","golden_finger":"第1章前300字","style_default":"强悬疑型","憋屈上限":"连续≤2章","卷均焊死":"每卷独立判定,过渡卷可豁免"}}

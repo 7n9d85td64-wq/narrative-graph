@@ -1,12 +1,1 @@
-{
-  "node_id":"infogap_matrix","type":"theory","name":"信息差叙事矩阵","category":"理论库",
-  "properties":{
-    "core":"一切叙事张力都是信息差的函数",
-    "layers":{"K_prot":"主角认知","K_support":"配角认知","K_reader":"读者认知(默认全知=1)"},
-    "formula":"InfoGap(role)=K_reader-K_role。范围[-1,1]",
-    "nest_depth":"1层:读者知X。2层:读者知主角知X。3层:读者知主角知配角不知X(暗爽最高效)。开局强制≥2层",
-    "emotion_map":{"0.8~1.0":"俯视感(暗爽)","0.5~0.8":"焦急感","0.2~0.5":"期待感","-0.2~0.2":"沉浸/悬念","-0.8~-0.2":"反转预备"},
-    "reset_rule":"焊死节点=InfoGap从0.85骤降到接近0。同一InfoGap维持≤3块",
-    "strategy_link":{"标准离卦":"单层释放","框架重置":"双层释放","范式降维":"三层释放"}
-  }
-}
+{"node_id":"infogap_matrix","type":"theory","name":"信息差叙事矩阵","version":"3.1.1","category":"理论库","properties":{"core":"一切叙事张力都是信息差的函数","dual_mechanism":{"cognitive_gap":{"formula":"InfoGap_Cog=K_reader-K_role","k_reader":"可1.0(全知)或0.5(限制视角)","爽感":"俯视感/焦急感"},"expected_certainty":{"formula":"InfoGap_Exp=1.0-读者对未来确定度","k_reader":"K<1时读者不知真相,好奇心悬念驱动","爽感":"沉浸感/悬念"}},"k_reader_detection":"黄金三章诊断器自动判定:上帝视角/多视角→K_reader≈1.0;严格限制性第三人称→K_reader≈0.5","nest_depth":{"signals":{"L1":"文本直接描写客观事实","L2":"内心独白/私密对话+行为证实主角知情","L3":"信息差宣告(他以为...其实...)+配角基于虚假前提错误行为"},"requirement":"开局强制≥2层嵌套,推荐3层"},"emotion_map":{"0.8~1.0":"俯视感(暗爽)","0.5~0.8":"焦急感","0.2~0.5":"期待感","-0.2~0.2":"沉浸/悬念","-0.8~-0.2":"反转预备"},"reset_rule":"焊死节点=InfoGap从0.85骤降到接近0。同一InfoGap维持≤3块","suspense_path":"悬疑文主线不受3块限制(能量补给判定)。区分爽文悬念vs悬疑文悬念"}}

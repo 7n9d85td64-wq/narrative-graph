@@ -1,0 +1,1 @@
+{"node_id":"style_engine","type":"theory","name":"风格引擎","category":"理论库","properties":{"core":"风格=全篇向量值相对于标准卦象向量组的系统性偏移","formula":"V_actual=clamp(V_standard+ΔE_style,V_min,V_max)","hard_constraints":"ΔF,ΔD,ΔA',ΔDir,ΔT直接修改目标向量","soft_guidance":"ΔP,ΔPen,ΔB进入能量叙事层","opening":"开局块偏移量加倍","evolution":"标准八卦向量表随参数库进化校准更新"}}

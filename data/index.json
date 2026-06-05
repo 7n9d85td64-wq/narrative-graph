@@ -3,26 +3,14 @@
   "version": "3.1.0",
   "last_updated": "2026-06-06",
   "structure": {
-    "theory": {"desc":"理论库·不可变","files":["space_8d.json","trigrams.json","six_pool_tags.json"]},
-    "parameters/common": {"desc":"参数库·通用基线(可进化)","files":["baseline.json"]},
-    "interaction": {"desc":"交互库·静态素材(可追加)","files":["professions.json","personalities.json"]},
-    "strategies": {"desc":"策略库·核心策略","files":["li_gua.json","xun_bao_dui.json"]},
-    "templates": {"desc":"黄金模板库·垂类提炼产物","files":[]},
-    "cases": {"desc":"案例库·分析报告","files":[]}
+    "theory": {"desc":"理论库·不可变","count":9,"files":["space_8d","trigrams","six_pool_tags","wuxing_flow","desire_matrix","rule_engine","precision_framework","infogap_matrix","narrative_action","style_engine"]},
+    "parameters/common": {"desc":"参数库·通用基线(可进化)","count":1,"files":["baseline"]},
+    "interaction": {"desc":"交互库·静态素材(可追加)","count":5,"files":["professions(10职业)","regions(13地域)","personalities(8性格)","character_functions(7角色)","styles(3风格)"]},
+    "strategies": {"desc":"策略库·6大核心策略","count":6,"files":["li_gua","xun_bao_dui","dui_gua","emotion_capital","weak_dominator","alliance"]},
+    "templates": {"desc":"黄金模板库","count":0},
+    "cases": {"desc":"案例库","count":0}
   },
-  "pending": [
-    "theory/wuxing_flow.json",
-    "theory/desire_matrix.json",
-    "theory/rule_engine.json",
-    "theory/precision_framework.json",
-    "theory/infogap_matrix.json",
-    "theory/narrative_action.json",
-    "interaction/regions.json",
-    "interaction/character_functions.json",
-    "interaction/styles.json",
-    "strategies/dui_gua.json",
-    "strategies/emotion_capital.json",
-    "strategies/weak_dominator.json",
-    "strategies/alliance.json"
-  ]
+  "total_registered_nodes": 21,
+  "pending": [],
+  "note": "理论库+参数库+交互库+策略库=21节点全部注册完毕。模板库和案例库随分析报告积累自动增长。"
 }

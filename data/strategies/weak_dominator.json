@@ -1,0 +1,1 @@
+{"node_id":"strategy_weak_dominator","type":"strategy","name":"示弱支配者","category":"策略库","properties":{"卦象序列":["坤(示弱)","乾(暗中支配)","离(可选揭示)"],"向量":{"示弱":"D0.85,F0.10,Dir-0.70","支配":"B0.80,F0.75,Dir+0.60"},"DS区间":[0.60,0.90]}}

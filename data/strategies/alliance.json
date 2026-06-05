@@ -1,0 +1,1 @@
+{"node_id":"strategy_alliance","type":"strategy","name":"联盟精算师","category":"策略库","properties":{"卦象序列":["多离卦同步释放","兑卦承诺(联盟协调)"],"DS区间":[0.75,0.90],"note":"多精算个体联盟"}}

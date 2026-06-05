@@ -1,0 +1,12 @@
+{
+  "node_id":"wuxing_flow","type":"theory","name":"五行流转引擎","category":"理论库",
+  "properties":{
+    "yin_yang":"Y=Dir×A'。Y≥0.5阳(生),Y<0.5阴(克)",
+    "intensity":"I_phase=卦象匹配度×(F+Pen+B+A'+T)/5",
+    "interaction":"Φ=0.5×Dynamic+0.3×Overlap+0.2×Logic。Φ>0.3相生,Φ<-0.3相克,中间中性",
+    "sheng":{"木生火":"I_wood×A'_wood×1.0","火生土":"I_fire×T_fire×0.7","土生金":"I_earth×P_earth×0.5","金生水":"I_metal×(1-P_metal)×0.8","水生木":"I_water×Pen_water×1.2"},
+    "ke":{"木克土":"I_wood×F_wood×1.0(爆发打破沉默=焊死节点)","土克水":"I_earth×B_earth×0.8(高压阻止情绪积累)","水克火":"I_water×D_water×1.0(憋屈让释放不彻底=虐)","火克金":"I_fire×T_fire×0.9(爆发压制收敛=连环反转)","金克木":"I_metal×P_metal×0.7(平静抑制萌动=策略等待)"},
+    "fc":"FC=实际得分/5.0。生+1,克-0.5,乘侮-1,中性0。≥0.8完整流转,0.5-0.8部分,<0.5断裂",
+    "direction_factor":"阴→阳+1,阳→阴-1。开局必须为正"
+  }
+}

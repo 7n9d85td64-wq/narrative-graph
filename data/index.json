@@ -1,22 +1,28 @@
 {
   "name": "叙事动力学 L2 知识图谱索引",
   "version": "3.1.0",
-  "last_updated": "2026-06-05",
-  "nodes": {
-    "theory_narrative_dynamics": {"type":"rule","name":"叙事动力学完整体系","file":"rules/theory_narrative_dynamics.json"},
-    "space_8d": {"type":"rule","name":"8维概念空间","file":"rules/space_8d.json"},
-    "trigrams": {"type":"rule","name":"八卦向量组","file":"rules/trigrams.json"},
-    "wuxing_flow": {"type":"rhythm","name":"五行流转引擎","file":"rhythms/wuxing_flow.json"},
-    "desire_matrix": {"type":"rule","name":"欲望矩阵与自动推导","file":"rules/desire_matrix.json"},
-    "rule_engine": {"type":"rule","name":"规则引擎","file":"rules/rule_engine.json"},
-    "pattern_crisis_reveal": {"type":"plot_pattern","name":"危机揭示型","file":"patterns/pattern_crisis_reveal.json"},
-    "arc_hero_confrontation": {"type":"character_arc","name":"英雄对峙弧线","file":"archetypes/arc_hero_confrontation.json"}
+  "last_updated": "2026-06-06",
+  "structure": {
+    "theory": {"desc":"理论库·不可变","files":["space_8d.json","trigrams.json","six_pool_tags.json"]},
+    "parameters/common": {"desc":"参数库·通用基线(可进化)","files":["baseline.json"]},
+    "interaction": {"desc":"交互库·静态素材(可追加)","files":["professions.json","personalities.json"]},
+    "strategies": {"desc":"策略库·核心策略","files":["li_gua.json","xun_bao_dui.json"]},
+    "templates": {"desc":"黄金模板库·垂类提炼产物","files":[]},
+    "cases": {"desc":"案例库·分析报告","files":[]}
   },
-  "pending_concepts": [
-    "precision_framework (七层精度框架)",
-    "infogap_matrix (信息差叙事矩阵)",
-    "strategy_library (精算策略库)",
-    "desire_decoder (欲望解码器)",
-    "interaction_library (交互库: 职业/地域/性格/角色/风格)"
+  "pending": [
+    "theory/wuxing_flow.json",
+    "theory/desire_matrix.json",
+    "theory/rule_engine.json",
+    "theory/precision_framework.json",
+    "theory/infogap_matrix.json",
+    "theory/narrative_action.json",
+    "interaction/regions.json",
+    "interaction/character_functions.json",
+    "interaction/styles.json",
+    "strategies/dui_gua.json",
+    "strategies/emotion_capital.json",
+    "strategies/weak_dominator.json",
+    "strategies/alliance.json"
   ]
 }

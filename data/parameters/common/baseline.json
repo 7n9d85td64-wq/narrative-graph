@@ -1,0 +1,16 @@
+{
+  "node_id": "param_baseline",
+  "type": "parameter",
+  "name": "参数基线",
+  "category": "参数库·通用",
+  "persistence": "可进化(5本同A+C+E分析后更新)",
+  "properties": {
+    "wuxing_coeffs": {
+      "sheng":{"木生火":1.0,"火生土":0.7,"土生金":0.5,"金生水":0.8,"水生木":1.2},
+      "ke":{"木克土":1.0,"土克水":0.8,"水克火":1.0,"火克金":0.9,"金克木":0.7}
+    },
+    "thresholds": {"sheng":0.3,"ke_mult":2.0,"flow_min":1.0,"block_fc_min":0.5,"low_fc_warn":0.3},
+    "platform_ds":{"番茄短篇":[0.85,0.95],"晋江长篇":[0.70,0.85]},
+    "precision_7layer": {"full":["词","句","段(小)","段(大)","章","单元","卷"],"short_6layer":["词","句","段","块","单元","整篇"]}
+  }
+}
